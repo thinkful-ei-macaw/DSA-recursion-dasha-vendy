@@ -1,16 +1,16 @@
-//1. Counting Sheep
+// 1. Counting Sheep
 
-// function sheepCounting(num) {
-//   //base case
-//   if (num === 0) {
-//     console.log("All sheep have jumped.");
-//     return; //to exit function
-//   }
-//   //general case
-//   console.log(`${num}: Another sheep jumps over the fence`);
-//   sheepCounting(num - 1);
-// }
-// sheepCounting(3);
+function sheepCounting(num) {
+  //base case
+  if (num === 0) {
+    console.log("All sheep have jumped.");
+    return; //to exit function
+  }
+  //general case
+  console.log(`${num}: Another sheep jumps over the fence`);
+  sheepCounting(num - 1);
+}
+sheepCounting(3);
 
 //2. calculator
 // 1. a number to the nth power
@@ -38,6 +38,7 @@ powerCalculator(10, 2);
 //   powerCalculator(int - 1, exp);
 // }
 // powerCalculator(3, 2);
+
 //3. reverse string
 function reverseString(str) {
   //base case
@@ -48,7 +49,18 @@ function reverseString(str) {
   return reverseString(str.slice(1)) + str[0];
 }
 reverseString("hit");
-//4.
+
+//4. triangular number
+function triangularNumber(num) {
+  if (num === 1) {
+    return 1;
+  }
+  //recursive case
+  return num + triangularNumber(num - 1);
+}
+triangularNumber(3);
+
+//5. string splitting
 
 //7. factorial
 function fact(n) {
@@ -61,14 +73,14 @@ function fact(n) {
 }
 fact(5);
 
-// 11. binary output
+// 12. binary output
 
-// function binaryRep(num) {
-//   //base case
-//   if (num <= 0) {
-//     return "";
-//   }
-//   const binary = num % 2;
-//   return binaryRep(Math.floor(num / 2)) + binary;
-// }
-// console.log(binaryRep(5));
+function binaryRep(num) {
+  //base case
+  if (num <= 0) {
+    return "";
+  }
+  const binary = num % 2;
+  return binaryRep(Math.floor(num / 2)) + binary;
+}
+console.log(binaryRep(5));
