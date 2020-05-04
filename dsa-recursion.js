@@ -59,6 +59,7 @@ function fact(n) {
   //recursive case
   else return n * fact(n - 1);
 }
+fact(5);
 
 // 11. binary output
 
