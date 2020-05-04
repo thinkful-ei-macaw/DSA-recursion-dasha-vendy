@@ -38,6 +38,27 @@ powerCalculator(10, 2);
 //   powerCalculator(int - 1, exp);
 // }
 // powerCalculator(3, 2);
+//3. reverse string
+function reverseString(str) {
+  //base case
+  if (str.length < 2) {
+    console.log(str);
+    return str;
+  }
+  return reverseString(str.slice(1)) + str[0];
+}
+reverseString("hit");
+//4.
+
+//7. factorial
+function fact(n) {
+  //base case
+  if (n == 1) {
+    return 1;
+  }
+  //recursive case
+  else return n * fact(n - 1);
+}
 
 // 11. binary output
 
